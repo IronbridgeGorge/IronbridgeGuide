@@ -6,6 +6,10 @@ body {
 	margin: 0;
 }
 
+a {
+	text-decoration: none;
+}
+
 .page-body {
 	max-width: 700px;
 	margin: 0 auto;
@@ -80,11 +84,12 @@ body {
 
 .back-button {
 	display: inline-block;
-	background-color: #00CAFF;
-	color: black;
+	background-color: #B24E3B;
+	color: white;
 	padding: 8px 2.5em;
 	border-radius: .5em;
 	margin-right: 10px;
+
 }
 
 .location-name {
