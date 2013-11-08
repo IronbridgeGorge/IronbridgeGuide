@@ -39,6 +39,7 @@ a {
 .get-started {
 	margin-top: 4em;
 	text-align: center;
+	cursor: hand;
 }
 
 .main-button {

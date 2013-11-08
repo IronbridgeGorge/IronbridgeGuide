@@ -3,6 +3,42 @@
   <link href="/stylesheets/styles.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width">  
   <title>Iron Insight</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>  
+  <script>
+
+  function displayPosition(position) {
+
+    $('#your-location').text('Your location: ' + position.coords.latitude + ', ' + position.coords.longitude);
+  }
+
+  function displayError() {
+
+  }
+
+  function checkForGeoLocation() {
+
+    if (navigator.geolocation) {
+
+		$('#your-location').text('Finding you...');
+    navigator.geolocation.watchPosition(
+      displayPosition, 
+      displayError,
+      { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
+    );
+  
+    } else {
+
+    }
+
+  }
+
+    $(document).ready(function() {
+			checkForGeoLocation();
+    });
+
+
+
+  </script>
 </head>
 <body>
 
@@ -11,6 +47,8 @@
     <div class="app-mini-header">
       <h1 class="app-title">Iron Insight</h1>
     </div>
+
+    <p id="your-location"></p>
 
     <p>These things of interest are nearby:</p>
 
