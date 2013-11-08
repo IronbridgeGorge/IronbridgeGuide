@@ -6,9 +6,32 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>  
   <script>
 
+  var locations = <%= LOCATIONS.to_json %>;
+
+  var current_location = null;
+
+	function toRad() {
+    return this * Math.PI / 180;
+  }
+
+
+	function getDistance(lat1,lon1,lat2,lon2) {
+	    var R = 6371; // km
+	    var dLat = (lat2-lat1).toRad();
+	    var dLon = (lon2-lon1).toRad(); 
+	    var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+	            Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) * 
+	            Math.sin(dLon/2) * Math.sin(dLon/2); 
+	    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+	    return (R * c) * 1000;
+	}
+
+
   function displayPosition(position) {
 
+  	current_location = position.coords;
     $('#your-location').text('Your location: ' + position.coords.latitude + ', ' + position.coords.longitude);
+    display_locations();
   }
 
   function displayError() {
@@ -32,11 +55,37 @@
 
   }
 
-    $(document).ready(function() {
-			checkForGeoLocation();
-    });
+  function display_locations() {
+
+  	var table_rows = '';
+
+		for (var i=0; i<locations.length;i++)  {
+
+			table_rows = table_rows + '<tr class="location"><td><img src="/images/placeholder.png"></td><td><a href="/location/' + locations[i].id + '" class="location-link"><div class="location-name">' + locations[i].name + '</div><div class="location-distance">';
 
 
+				if(current_location) {
+					table_rows = table_rows + getDistance(current_location.latitude,current_location.longitude,parseFloat(locations[i].latitude),parseFloat(locations[i].longitude)) + 'm away';
+				}
+
+			 table_rows = table_rows + '</div></a></td></tr>';
+		}
+
+		$('#locations').html(table_rows);
+	}
+
+  $(document).ready(function() {
+		checkForGeoLocation();
+		display_locations();
+  });
+
+
+	/** Converts numeric degrees to radians */
+	if (typeof Number.prototype.toRad == 'undefined') {
+	  Number.prototype.toRad = function() {
+	    return this * Math.PI / 180;
+	  }
+	}
 
   </script>
 </head>
@@ -52,18 +101,7 @@
 
     <p>These things of interest are nearby:</p>
 
-    <table class="locations">
-    	<% LOCATIONS.each do |location| %>
-    		<tr class="location">
-    			<td><img src="/images/placeholder.png"></td>
-    			<td>
-    				<a href="/location/<%= location[:id].to_s %>" class="location-link">
-    					<div class="location-name"><%= location[:name] %></div>
-							<div class="location-distance">40m away</div>
-						</a>
-    			</td>
-    		</tr>
-    	<% end %>
+    <table class="locations" id="locations">
     </table>
 
   </div>
