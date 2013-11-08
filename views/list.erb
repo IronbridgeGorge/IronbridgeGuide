@@ -8,6 +8,8 @@
 
   var locations = <%= LOCATIONS.to_json %>;
 
+  console.log(locations);
+
   var current_location = null;
 
 	function toRad() {
@@ -59,14 +61,46 @@
 
   function update_location_distances() {
 
+  	var location_at = null;;
+  	var nearest_distance = null;
+
 		for (var i=0; i<locations.length;i++)  {
 
-				if(current_location) {
-					$('#location-distance-' + locations[i].id).text(getDistance(current_location.latitude,current_location.longitude,parseFloat(locations[i].latitude),parseFloat(locations[i].longitude)) + 'm away');
+			if(current_location) {
+
+				var distance_to_location = getDistance(current_location.latitude,current_location.longitude,parseFloat(locations[i].latitude),parseFloat(locations[i].longitude));
+
+				if (distance_to_location < 100) {
+
+					if(nearest_distance && distance_to_location < nearest_distance) {
+						nearest_distance = distance_to_location;
+						location_at = locations[i].id;
+					} else {
+						nearest_distance = distance_to_location;
+						location_at = locations[i].id;
+					}						
 				}
 
+			$('#location-distance-' + locations[i].id).text(distance_to_location + 'm away');
 
 		}
+
+		if (location_at) {
+
+			for (var i=0; i<locations.length;i++)  {
+
+				if(locations[i].id == location_at) {
+					$('#location-at').html('You are at <b>' + locations[i].name + '</b>');
+				}
+
+			}
+			
+		} else {
+			$('#location-at').text();						
+		}
+
+	}
+
   }
 
   function display_locations() {
@@ -112,6 +146,8 @@
     </div>
 
     <p id="your-location"></p>
+
+    <div id="location-at"></div>
 
     <p>These things of interest are nearby:</p>
 
