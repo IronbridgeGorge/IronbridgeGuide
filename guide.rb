@@ -32,9 +32,20 @@ require 'sinatra'
 			:latitude => '',
 			:longitude => ''
 		},
-	
 		{
 			:id => 6,
+			:name => "Coalbrookdale Scientific Institute",
+			:latitude => '52.635495',
+			:longitude => '-2.488522'
+		},
+		{
+			:id => 7,
+			:name => "Blacksmiths Statue",
+			:latitude => '52.63982',
+			:longitude => '-2.49268'
+		},
+		{
+			:id => 8,
 			:name => "Long Warehouse",
 			:latitude => '52.639474',
 			:longitude => '-2.492562'
