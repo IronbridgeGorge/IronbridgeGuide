@@ -3,3 +3,23 @@ body {
 	color: #444;
 	font-family: 'Georgia', serif;
 }
+
+.page-body {
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.app-header {
+	text-align: center;
+}
+
+.app-title {
+	margin: 0;
+	font-size: 36px;
+	line-height: 54px;
+}
+
+.app-subtitle {
+	font-size: 24px;
+	margin: 0;
+}
