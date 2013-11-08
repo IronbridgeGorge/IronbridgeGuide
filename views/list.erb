@@ -1,0 +1,34 @@
+<html>
+<head>
+  <link href="/stylesheets/styles.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width">  
+  <title>Iron Insight</title>
+</head>
+<body>
+
+  <div class="page-body">
+
+    <div class="app-mini-header">
+      <h1 class="app-title">Iron Insight</h1>
+    </div>
+
+    <p>These things of interest are nearby:</p>
+
+    <table class="locations">
+    	<% LOCATIONS.each do |location| %>
+    		<tr class="location">
+    			<td><img src="/images/placeholder.png"></td>
+    			<td>
+    				<a href="/location/<%= location[:id].to_s %>" class="location-link">
+    					<div class="location-name"><%= location[:name] %></div>
+							<div class="location-distance">40m away</div>
+						</a>
+    			</td>
+    		</tr>
+    	<% end %>
+    </table>
+
+  </div>
+
+</div>
+</body>

@@ -1,12 +1,20 @@
 body {
 	background-color: #FCFCFC;
 	color: #444;
-	font-family: 'Georgia', serif;
+	font-family: 'Hevetica Neue', 'Helvetica', 'Arial', sans-serif;
+	padding: 0;
+	margin: 0;
 }
 
 .page-body {
 	max-width: 700px;
 	margin: 0 auto;
+	padding: 5px;
+}
+
+.app-nav-content {
+	max-width: 700px;
+	margin: 0 auto;	
 }
 
 .app-header {
@@ -22,4 +30,64 @@ body {
 .app-subtitle {
 	font-size: 24px;
 	margin: 0;
+}
+
+.get-started {
+	margin-top: 4em;
+	text-align: center;
+}
+
+.main-button {
+	display: inline-block;
+	background-color: #00CAFF;
+	color: black;
+	padding: .5em;
+	font-size: 2em;
+	border-radius: .5em;
+}
+
+.app-mini-header .app-title {
+	font-size: 1.2em;
+	text-align: center;
+}
+
+.locations {
+	width: 100%;
+}
+
+.location {
+	height: 60px;
+}
+
+.location img {
+	height: 60px;
+}
+
+.location .location-name {
+	font-weight: bold;
+}
+
+.location-link {
+	text-decoration: none;
+	color: inherit;
+}
+
+.app-nav {
+	background-color: #CCC;
+	color: black;
+	padding: 5px;
+}
+
+.back-button {
+	display: inline-block;
+	background-color: #00CAFF;
+	color: black;
+	padding: 8px 2.5em;
+	border-radius: .5em;
+	margin-right: 10px;
+}
+
+.location-name {
+	display: inline-block;
+	font-size: 1em;
 }
