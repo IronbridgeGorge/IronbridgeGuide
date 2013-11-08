@@ -13,7 +13,11 @@ a {
 .page-body {
 	max-width: 700px;
 	margin: 0 auto;
-	padding: 5px;
+	padding: 0;
+}
+
+.page-body p {
+	padding: 0 5px;
 }
 
 .app-nav-content {
@@ -58,10 +62,14 @@ a {
 
 .locations {
 	width: 100%;
+	border-collapse: collapse;
 }
 
 .location {
 	height: 60px;
+	border-width: 1px 0;
+	border-style: solid;
+	border-color: #888;
 }
 
 .location img {

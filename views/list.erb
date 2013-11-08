@@ -31,10 +31,12 @@
 
   	current_location = position.coords;
     $('#your-location').text('Your location: ' + position.coords.latitude + ', ' + position.coords.longitude);
-    display_locations();
+    update_location_distances();
   }
 
-  function displayError() {
+  function displayError(error) {
+  	console.log('Error locating');
+  	console.log(error);
 
   }
 
@@ -55,13 +57,25 @@
 
   }
 
+  function update_location_distances() {
+
+		for (var i=0; i<locations.length;i++)  {
+
+				if(current_location) {
+					$('#location-distance-' + locations[i].id).text(getDistance(current_location.latitude,current_location.longitude,parseFloat(locations[i].latitude),parseFloat(locations[i].longitude)) + 'm away');
+				}
+
+
+		}
+  }
+
   function display_locations() {
 
   	var table_rows = '';
 
 		for (var i=0; i<locations.length;i++)  {
 
-			table_rows = table_rows + '<tr class="location"><td><img src="/images/placeholder.png"></td><td><a href="/location/' + locations[i].id + '" class="location-link"><div class="location-name">' + locations[i].name + '</div><div class="location-distance">';
+			table_rows = table_rows + '<tr class="location"><td><img src="/images/placeholder.png"></td><td><a href="/location/' + locations[i].id + '" class="location-link"><div class="location-name">' + locations[i].name + '</div><div class="location-distance" id="location-distance-' + locations[i].id + '">';
 
 
 				if(current_location) {
