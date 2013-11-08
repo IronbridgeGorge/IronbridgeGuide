@@ -26,13 +26,13 @@ require 'sinatra'
 			:latitude => '',
 			:longitude => ''
 		},
-		,
 		{
 			:id => 5,
 			:name => "Wharf slipway",
 			:latitude => '',
 			:longitude => ''
-		}
+		},
+	
 		{
 			:id => 6,
 			:name => "Long Warehouse",
