@@ -160,3 +160,17 @@ a {
 	width: 100%;
 	
 }
+
+#location-at {
+	font-size: 1.5em;
+	text-align: center;
+	border-width: 2px 0;
+	border-color: #777;
+	border-style: solid;
+	background-color: #CCC;
+	padding: 4px;
+}
+
+#location-at.hidden {
+	display: none;
+}

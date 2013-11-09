@@ -68,9 +68,9 @@
 
 				var distance_to_location = getDistance(current_location.latitude,current_location.longitude,parseFloat(locations[i].latitude),parseFloat(locations[i].longitude));
 
-				if (distance_to_location < 100) {
+				if (distance_to_location < 50) {
 
-					if(nearest_distance && distance_to_location < nearest_distance) {
+					if(nearest_distance && (distance_to_location < nearest_distance)) {
 						nearest_distance = distance_to_location;
 						location_at = locations[i].id;
 					} else {
@@ -88,13 +88,19 @@
 			for (var i=0; i<locations.length;i++)  {
 
 				if(locations[i].id == location_at) {
-					$('#location-at').html('You are at <b>' + locations[i].name + '</b>');
+
+          var location_id = locations[i].id;
+
+					$('#location-at').html('<p>You are at <b>' + locations[i].name + '</b></p><p>Find out more</p>').removeClass('hidden');
+          $('#location-at').click(function() {
+            showLocation(location_id);
+          })
 				}
 
 			}
 			
 		} else {
-			$('#location-at').text();						
+			$('#location-at').addClass('hidden').text();						
 		}
 
 	}
@@ -217,7 +223,7 @@
 
 	    <p id="your-location"></p>
 
-	    <div id="location-at"></div>
+	    <div id="location-at" class="hidden"></div>
 
 	    <p>These things of interest are nearby:</p>
 
