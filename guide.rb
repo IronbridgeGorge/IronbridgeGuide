@@ -1,57 +1,33 @@
 require 'sinatra'
 require 'json'
+require 'rdiscount'
+require 'yaml'
 
-	LOCATIONS = [
-		{
-			:id => 1,
-			:name => "The Old Furnace",
-			:latitude => '52.640454',
-			:longitude => '-2.492907'
-		},
-		{
-			:id => 2,
-			:name => "Boy and Swan Fountain",
-			:latitude => '52.639927',
-			:longitude => '-2.492813'
-		},
-		{
-			:id => 3,
-			:name => "Plate Railway Track",
-			:latitude => '52.640342',
-			:longitude => '-2.493107'
-		},
-		{
-			:id => 4,
-			:name => "Carpenters Row",
-			:latitude => '',
-			:longitude => ''
-		},
-		{
-			:id => 5,
-			:name => "Wharf slipway",
-			:latitude => '',
-			:longitude => ''
-		},
-		{
-			:id => 6,
-			:name => "Coalbrookdale Scientific Institute",
-			:latitude => '52.635495',
-			:longitude => '-2.488522'
-		},
-		{
-			:id => 7,
-			:name => "Blacksmiths Statue",
-			:latitude => '52.63982',
-			:longitude => '-2.49268'
-		},
-		{
-			:id => 8,
-			:name => "Long Warehouse",
-			:latitude => '52.639474',
-			:longitude => '-2.492562'
-		}
 
-	]
+LIST = Dir.entries('locations').select {|x| x =~ /\A.*\.md+/}
+
+LOCATIONS = []
+
+LIST.each do |file_name|
+
+  file = File.join('locations', file_name)
+  file_content = File.read(file)
+
+  location = {}
+
+  metadata = YAML.load(file_content)
+
+  location = location.merge!(metadata) if metadata
+
+  location_raw_content = file_content.gsub(/---(.|\n)*---/, '').strip;
+
+  location = location.merge!({
+    'content' => RDiscount.new(location_raw_content).to_html
+    })
+
+  LOCATIONS << location
+
+end
 
 
 get '/' do

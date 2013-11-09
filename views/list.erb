@@ -109,22 +109,67 @@
 
 		for (var i=0; i<locations.length;i++)  {
 
-			table_rows = table_rows + '<tr class="location"><td><img src="/images/placeholder.png"></td><td><a href="/location/' + locations[i].id + '" class="location-link"><div class="location-name">' + locations[i].name + '</div><div class="location-distance" id="location-distance-' + locations[i].id + '">';
-
+			var table_row = '<div class="location-image" id="' + locations[i].id + '"><img src="/images/placeholder.png" class="location-thumbnail"></div><div class="location-info" id="' + locations[i].id + '"><div class="location-name">' + locations[i].name + '</div><div class="location-distance" id="location-distance-' + locations[i].id + '">';
 
 				if(current_location) {
 					table_rows = table_rows + getDistance(current_location.latitude,current_location.longitude,parseFloat(locations[i].latitude),parseFloat(locations[i].longitude)) + 'm away';
 				}
 
-			 table_rows = table_rows + '</div></a></td></tr>';
+			 	table_row = table_row + '</div></div>';
+
+			 	var location_row = document.createElement('div');
+			 	location_row.setAttribute('class', 'location');
+        location_row.setAttribute('id', locations[i].id);
+
+			 	location_row.innerHTML = table_row;
+
+        location_id = locations[i].id;
+
+        $(location_row).click(function(event) {
+
+          console.log(event.target.id);
+          showLocation(event.target.id);
+        })
+
+
+				document.getElementById('locations').appendChild(location_row);
+
 		}
 
-		$('#locations').html(table_rows);
+
 	}
+
+  function showLocation(id) {
+
+    console.log(id);
+
+  	var location = null;
+
+		for (var i=0; i<locations.length;i++)  {
+
+			if(parseInt(locations[i].id) == id) {
+				location = locations[i];
+			}
+		}
+
+		if (location) {
+
+		  $('#location-panel-name').text(location.name);
+    	$('#location-panel-info').html(location.content);
+    	$('#location-panel').removeClass('hidden');	
+
+		}
+
+  }	
 
   $(document).ready(function() {
 		checkForGeoLocation();
 		display_locations();
+
+		document.getElementById('back-button').addEventListener('click', function() {
+			$('#location-panel').addClass('hidden');
+		});
+
   });
 
 
@@ -141,6 +186,21 @@
 
   <div class="page-body">
 
+  	<div id="location-panel" class="hidden">
+	    <div class="location-panel-content">
+			  
+			  <div class="app-nav">
+			    <div class="app-nav-content">
+			      <a id="back-button" class="back-button">Back</a>
+			      <h1 class="location-name" id="location-panel-name"></h1>
+			    </div>
+			  </div>
+
+	  		<div id="location-panel-info"></div>
+
+	  	</div>
+  	</div>
+
     <div class="app-mini-header">
       <h1 class="app-title">Iron Insight</h1>
     </div>
@@ -151,8 +211,7 @@
 
     <p>These things of interest are nearby:</p>
 
-    <table class="locations" id="locations">
-    </table>
+    <div class="locations" id="locations"></div>
 
   </div>
 

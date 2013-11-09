@@ -63,6 +63,7 @@ a {
 .locations {
 	width: 100%;
 	border-collapse: collapse;
+	display: table;
 }
 
 .location {
@@ -70,7 +71,19 @@ a {
 	border-width: 1px 0;
 	border-style: solid;
 	border-color: #888;
+	display: table-row;
 }
+
+.location .location-image {
+	display: table-cell;
+	vertical-align: top;	
+}
+
+.location .location-info {
+	display: table-cell;
+	vertical-align: middle;
+}
+
 
 .location img {
 	height: 60px;
@@ -104,4 +117,26 @@ a {
 .location-name {
 	display: inline-block;
 	font-size: 1em;
+}
+
+#location-panel.hidden {
+	display: none;
+}
+
+#location-panel {
+	position: absolute;
+	z-index: 2;
+	display: block;
+	width: 100%;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	background-color: #FCFCFC;
+	min-height: 100%;
+}
+
+.location-panel-content {
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 0;
 }
