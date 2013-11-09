@@ -1,7 +1,7 @@
 ---
 name: Section of rail
-latitude: 52.640342
-longitude: -2.493107
+latitude: 52.640345
+longitude: -2.493101
 id: 3
 ---
 
