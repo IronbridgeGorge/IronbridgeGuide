@@ -155,3 +155,7 @@ a {
 #location-panel-info img {
 	max-width: 100%;
 }
+
+#location-panel-info iframe {
+	width: 100%;
+}
