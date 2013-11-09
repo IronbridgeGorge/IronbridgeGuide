@@ -14,3 +14,7 @@ This is a picture of a cast iron table based on the Boy and Swan fountain:
 Here’s curator Shane talking about the fountain:
 
 <iframe width="320" height="180" src="//www.youtube.com/embed/aaXTnWDJPdA?rel=0" frameborder="0" allowfullscreen></iframe>
+
+Do you know that the Crown claimed ownership of all mute swans? Today, the Crown retains the right to ownership of all unmarked mute swans in open water, but The Queen only exercises her ownership on certain stretches of the Thames and its surrounding tributaries. 
+
+Want to know more? Check the [British Monarchy official website](http://www.royal.gov.uk/royaleventsandceremonies/swanupping/swanupping.aspx)
