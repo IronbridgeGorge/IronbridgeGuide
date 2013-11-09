@@ -1,5 +1,5 @@
 ---
-name: Iron Gates of Coalbrookdale Warehouse
+name: Iron Gates
 latitude: 52.639927
 longitude: -2.492813
 id: 8
