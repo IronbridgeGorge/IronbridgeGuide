@@ -105,6 +105,8 @@
 
   	var table_rows = '';
 
+    var location_id = 1;
+
 		for (var i=0; i<locations.length;i++)  {
 
 			var table_row = '<img src="/images/placeholder.png" class="location-thumbnail"><div class="location-info"><div class="location-name">' + locations[i].name + '</div><div class="location-distance" id="location-distance-' + locations[i].id + '">';
@@ -124,7 +126,18 @@
         location_id = locations[i].id;
 
         $(location_row).click(function(event) {
-          showLocation(1);
+
+          var target = event.target
+
+          console.log(target.nodeName);
+          if (target.nodeName != 'A') {
+            target = target.parentNode;
+          }
+          if (target.nodeName != 'A') {
+            target = target.parentNode;
+          }
+
+          showLocation(parseInt(target.getAttribute('id')));
         })
 
 
