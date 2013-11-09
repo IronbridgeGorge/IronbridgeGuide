@@ -1,5 +1,5 @@
 ---
-name: Lump of Metsl
+name: Lump of Metal
 latitude: 52.63982
 longitude: -2.49268
 id :10
