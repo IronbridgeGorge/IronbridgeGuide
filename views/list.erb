@@ -8,8 +8,6 @@
 
   var locations = <%= LOCATIONS.to_json %>;
 
-  console.log(locations);
-
   var current_location = null;
 
 	function toRad() {
@@ -109,7 +107,7 @@
 
 		for (var i=0; i<locations.length;i++)  {
 
-			var table_row = '<div class="location-image" id="' + locations[i].id + '"><img src="/images/placeholder.png" class="location-thumbnail"></div><div class="location-info" id="' + locations[i].id + '"><div class="location-name">' + locations[i].name + '</div><div class="location-distance" id="location-distance-' + locations[i].id + '">';
+			var table_row = '<img src="/images/placeholder.png" class="location-thumbnail"><div class="location-info"><div class="location-name">' + locations[i].name + '</div><div class="location-distance" id="location-distance-' + locations[i].id + '">';
 
 				if(current_location) {
 					table_rows = table_rows + getDistance(current_location.latitude,current_location.longitude,parseFloat(locations[i].latitude),parseFloat(locations[i].longitude)) + 'm away';
@@ -117,7 +115,7 @@
 
 			 	table_row = table_row + '</div></div>';
 
-			 	var location_row = document.createElement('div');
+			 	var location_row = document.createElement('a');
 			 	location_row.setAttribute('class', 'location');
         location_row.setAttribute('id', locations[i].id);
 
@@ -126,9 +124,7 @@
         location_id = locations[i].id;
 
         $(location_row).click(function(event) {
-
-          console.log(event.target.id);
-          showLocation(event.target.id);
+          showLocation(1);
         })
 
 
@@ -140,8 +136,6 @@
 	}
 
   function showLocation(id) {
-
-    console.log(id);
 
   	var location = null;
 

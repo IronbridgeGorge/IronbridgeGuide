@@ -72,31 +72,31 @@ a {
 
 .locations {
 	width: 100%;
-	border-collapse: collapse;
-	display: table;
+	border-bottom: 1px solid #888;
 }
 
 .location {
 	height: 60px;
-	border-width: 1px 0;
+	border-width: 1px 0 0 0;
 	border-style: solid;
 	border-color: #888;
-	display: table-row;
+	clear: left;
+	display: block;
 }
 
-.location .location-image {
-	display: table-cell;
-	vertical-align: top;	
+.location:hover {
+	background-color: white;
+	cursor: hand;
 }
 
 .location .location-info {
-	display: table-cell;
-	vertical-align: middle;
 }
 
 
-.location img {
+.location .location-thumbnail {
+	float: left;
 	height: 60px;
+	padding-right: 10px;
 }
 
 .location .location-name {
@@ -107,7 +107,6 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
-
 
 .back-button {
 	display: inline-block;
@@ -145,4 +144,9 @@ a {
 	max-width: 700px;
 	margin: 0 auto;
 	padding: 0;
+}
+
+.logo {
+	display: block;
+	margin: 20px auto 0 auto;
 }
