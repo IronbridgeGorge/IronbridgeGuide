@@ -1,7 +1,7 @@
 ---
 name: GWR Viaduct
-latitude: 52.639927
-longitude: -2.492813
+latitude: 52.64031
+longitude: -2.493356
 id: 7
 ---
 
