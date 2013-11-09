@@ -109,7 +109,7 @@
 
 		for (var i=0; i<locations.length;i++)  {
 
-			var table_row = '<img src="/images/placeholder.png" class="location-thumbnail"><div class="location-info"><div class="location-name">' + locations[i].name + '</div><div class="location-distance" id="location-distance-' + locations[i].id + '">';
+			var table_row = '<img src="/images/thumbnails/' + locations[i].id + '.jpg" class="location-thumbnail"><div class="location-info"><div class="location-name">' + locations[i].name + '</div><div class="location-distance" id="location-distance-' + locations[i].id + '">';
 
 				if(current_location) {
 					table_rows = table_rows + getDistance(current_location.latitude,current_location.longitude,parseFloat(locations[i].latitude),parseFloat(locations[i].longitude)) + 'm away';
