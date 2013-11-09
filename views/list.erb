@@ -30,7 +30,16 @@
   function displayPosition(position) {
 
   	current_location = position.coords;
-    $('#your-location').text('Your location: ' + position.coords.latitude + ', ' + position.coords.longitude);
+
+    distance_from_coalbrookdale = getDistance(current_location.latitude, current_location.longitude, 52.638239,-2.492922);
+
+    if (distance_from_coalbrookdale < 5000) {
+      text = 'Welcome to Coalbrookdale';
+    } else {
+      text = 'You are over 5km from Coalbrookdale. Why not visit?'
+    }
+
+    $('#your-location').text(text);
     update_location_distances();
   }
 
