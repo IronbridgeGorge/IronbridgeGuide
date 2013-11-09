@@ -1,7 +1,7 @@
 ---
 name: Boy and Swan Fountain
-latitude: 52.639927
-longitude: -2.492813
+latitude: 52.639921
+longitude: -2.492816
 id: 2
 ---
 
