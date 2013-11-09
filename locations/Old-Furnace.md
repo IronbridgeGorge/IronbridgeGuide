@@ -6,3 +6,5 @@ id: 1
 ---
 
 This was where iron was made!
+
+The pyramid was built later to protect it.
