@@ -6,40 +6,13 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>  
   <script>
 
-  function displayPosition(position) {
-    document.location = '/list';
-  }
-
-  function displayError() {
-
-  }
-
-  function checkForGeoLocation() {
-
-    if (navigator.geolocation) {
-
-    $('#get_started').text('Loading...');
-
-    navigator.geolocation.getCurrentPosition(
-      displayPosition, 
-      displayError,
-      { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
-    );
-  
-    } else {
-
-    }
-
-  }
 
   $(document).ready(function() {
 
     $('#get_started').click(function(event) {
 
-      checkForGeoLocation();
+      document.location = '/list';
 
-      return false;
-      event.preventDefault();
     }); 
 
   });
