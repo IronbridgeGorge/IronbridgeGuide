@@ -13,8 +13,14 @@ The rail has a flange on it which kept the wagon wheels on the track. Later rail
 
 how long did it take to get from Coalbrookdale to London in the mid 19th century?
 
-Listen to a historian Matthew Ward talks about the transport system in those times.
+Listen to historian Matthew Ward talks about the transport system in those times.
 
 <audio controls>
     <source src="/audio/Transport.mp3" title="Transport">
 </audio>
+
+## Questions
+
+**When was this made?**
+
+The truth is: no-one is quite sure! We think it might be a reconstruction, but it could be original. if you know any more, let us know...
