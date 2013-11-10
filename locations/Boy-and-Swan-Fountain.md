@@ -34,8 +34,6 @@ Listen to a story told by a historian Matthew Ward.
 ... why the Great Exhibition did change the world?
 Listen to a historian Matthew Ward tells us a story about this exhibition. 
 
-Want to know more? Just tweet and ask @HistoryNeedsYou https://twitter.com/HistoryNeedsYou
-
 <audio controls>
     <source src="/audio/Great-Exhibition2.mp3" title="Great Exhibition 2">
 </audio>
