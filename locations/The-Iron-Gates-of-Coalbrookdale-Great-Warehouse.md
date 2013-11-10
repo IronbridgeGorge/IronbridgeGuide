@@ -12,10 +12,10 @@ The gates outside the Coalbrookdale Company warehouse were a favourite meeting p
 ![](/images/historic-photos/workers.jpg "")
 
 <audio controls>
-    <source src="/audio/WorkersHats.mp3">
+    <source src="/audio/WorkersHats.mp3" title="Workers Hats">
 </audio>
 
 <audio controls>
-    <source src="/audio/PopyourClogs.mp3">
+    <source src="/audio/PopyourClogs.mp3" title="Pop Your Clogs">
 </audio>
 

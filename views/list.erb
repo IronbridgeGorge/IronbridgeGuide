@@ -224,6 +224,13 @@
 
       });
 
+
+      $('#location-panel-info audio').bind('play', function() {
+
+        var audio_title = $(this)[0].getElementsByTagName('source')[0].getAttribute('title');
+        ga('send', 'event', 'audio', 'play', audio_title);
+
+      });
 		}
 
     ga('send', 'event', 'location', 'open', location.name);

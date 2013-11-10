@@ -27,7 +27,7 @@ Want to know more? Check the [British Monarchy official website](http://www.roya
 Listen to a story told by a historian Matthew Ward. 
 
 <audio controls>
-    <source src="/audio/Great-Exhibition.mp3">
+    <source src="/audio/Great-Exhibition.mp3" title="Great Exhibition 1">
 </audio>
 
 ## Did you know?
@@ -37,5 +37,5 @@ Listen to a historian Matthew Ward tells us a story about this exhibition.
 Want to know more? Just tweet and ask @HistoryNeedsYou https://twitter.com/HistoryNeedsYou
 
 <audio controls>
-    <source src="/audio/Great-Exhibition2.mp3">
+    <source src="/audio/Great-Exhibition2.mp3" title="Great Exhibition 2">
 </audio>
