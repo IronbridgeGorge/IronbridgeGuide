@@ -38,9 +38,6 @@ get '/list' do
   erb :list
 end
 
-get '/location/:id' do |id|
-
-  @location = LOCATIONS.select {|location| location[:id] == id.to_i }.first
-
-  erb :location
+get '/about' do
+  erb :about
 end

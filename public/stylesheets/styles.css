@@ -194,3 +194,8 @@ a {
 	width: 100%;
 	height: 500px;
 }
+
+.about-link {
+	text-align: center;
+	margin-top: 30px;
+}
