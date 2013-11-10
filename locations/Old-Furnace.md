@@ -15,3 +15,8 @@ The second image shows what the site looked like before the Museum began to cons
 
 ![](/images/historic-photos/old_furnace.jpg "")
 
+Listen to Bill Brown (born in 1886) speaking about his job as a worker at a forge. He mentions 'races', which were metal plates between the furnace and the hammer.
+
+<audio controls>
+    <source src="/audio/Bill-Brown.mp3">
+</audio>

@@ -20,3 +20,5 @@ The aerial view above from the first half of the Twentieth Century shows how man
 *‘This place affords a number of delightful prospects … All the principal beauties of landscape may be observed from some or other of the hills that surround it’* (G. Perry, ‘A description of Coalbrookdale’, c. 1758).
 
 *‘The descent into Coalbrookdale appeared to be a veritable descent into the infernal regions. The noise was so great in the long tube which was joined to the furnace that it could easily be imagined the hissing of the irate furies. The stream of white hot liquid appeared as the lava of Vesuvius’* (Impressions of an Italian traveller, 1824)
+
+<iframe width="320" height="180" src="//www.youtube.com/embed/1Dxm7Leu-0k?rel=0" frameborder="0" allowfullscreen></iframe>

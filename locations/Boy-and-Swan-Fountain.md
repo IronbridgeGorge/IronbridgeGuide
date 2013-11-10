@@ -20,3 +20,13 @@ Here’s curator Shane talking about the fountain:
 ... that the Crown claimed ownership of all mute swans? Today, the Crown retains the right to ownership of all unmarked mute swans in open water, but The Queen only exercises her ownership on certain stretches of the Thames and its surrounding tributaries. 
 
 Want to know more? Check the [British Monarchy official website](http://www.royal.gov.uk/royaleventsandceremonies/swanupping/swanupping.aspx)
+
+Listen:
+
+<audio controls>
+    <source src="/audio/Great-Exhibition.mp3">
+</audio>
+
+<audio controls>
+    <source src="/audio/Great-Exhibition2.mp3">
+</audio>
