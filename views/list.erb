@@ -211,6 +211,19 @@
     	$('#location-panel').removeClass('hidden');	
       $('#list-panel').addClass('hidden'); 
 
+      $('#location-panel-info img').click(function() {
+
+
+        if (document.documentElement.requestFullscreen) {
+          $(this)[0].requestFullscreen();
+        } else if (document.documentElement.mozRequestFullScreen) {
+          $(this)[0].mozRequestFullScreen();
+        } else if (document.documentElement.webkitRequestFullscreen) {
+          $(this)[0].webkitRequestFullscreen();
+        }
+
+      });
+
 		}
 
     ga('send', 'event', 'location', 'open', location.name);
