@@ -163,6 +163,37 @@
 
 	}
 
+  function showMap() {
+    $('#map-panel').removeClass('hidden');
+    $('#list-panel').addClass('hidden'); 
+    ga('send', 'event', 'map', 'open');    
+
+    var map = L.map('map', {touchZoom: false, zoomControl: false}).setView([52.638239,-2.492922], 18);
+
+    // add an OpenStreetMap tile layer
+    L.tileLayer('http://{s}.www.toolserver.org/tiles/bw-mapnik/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 18
+    }).addTo(map);
+
+
+    for (var i=0; i<locations.length;i++)  {
+
+      L.marker([locations[i].latitude, locations[i].longitude]).addTo(map)
+      .bindPopup(locations[i].name)
+      .openPopup();
+
+
+    }
+
+  }
+
+  function hideMap() {
+    $('#map-panel').addClass('hidden');
+    $('#list-panel').removeClass('hidden');     
+    ga('send', 'event', 'map', 'close');    
+  }
+
   function showLocation(id) {
 
   	var location = null;
@@ -190,10 +221,24 @@
 		checkForGeoLocation();
 		display_locations();
 
+    $('#view-map').click(function() {
+      showMap();
+    });
+
+    $('#map-back-button').click(function() {
+      hideMap();
+    });
+
 		document.getElementById('back-button').addEventListener('click', function() {
 			$('#location-panel').addClass('hidden');
       $('#list-panel').removeClass('hidden');       
 		});
+
+
+    // add a marker in the given location, attach some popup content to it and open the popup
+//    L.marker([51.5, -0.09]).addTo(map)
+ //       .bindPopup('A pretty CSS3 popup. <br> Easily customizable.')
+  //      .openPopup();    
 
   });
 
@@ -206,10 +251,37 @@
 	}
 
   </script>
+  <link rel="stylesheet" href="/stylesheets/leaflet.css" />  
+  <!--[if lte IE 8]>
+      <link rel="stylesheet" href="/stylesheets/leaflet.ie.css" />
+  <![endif]-->  
+  <script src="/javascripts/leaflet.js"></script>
 </head>
 <body>
 
   <div class="page-body">
+
+    <div id="map-panel" class="hidden">
+      <div class="map-panel-content">
+        
+        <div class="app-nav">
+          <div class="app-nav-content">
+            <a id="map-back-button" class="back-button">Back</a>
+            <h1 class="location-name">Map</h1>
+          </div>
+        </div>
+
+        <div id="map-panel-info">
+          <p>Explore this map</p>
+
+          <div style="position: relative;">
+            <div id="map"></div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
 
   	<div id="location-panel" class="hidden">
 	    <div class="location-panel-content">
@@ -235,7 +307,7 @@
 
 	    <div id="location-at" class="hidden"></div>
 
-	    <p>These things of interest are nearby:</p>
+	    <p>These things of interest are nearby:  or <a id="view-map">view map</a></p>
 
 	    <div class="locations" id="locations"></div>
 	  </div>
