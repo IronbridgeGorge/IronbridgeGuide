@@ -37,3 +37,9 @@ Listen to a historian Matthew Ward tells us a story about this exhibition.
 <audio controls>
     <source src="/audio/Great-Exhibition2.mp3" title="Great Exhibition 2">
 </audio>
+
+## Questions
+
+**Why is the fountain not painted as it was?**
+
+Phil our Duty Officer has explained originally it was painted for exhibition - however, due to its age and rarity, it has been painted to protect the metal from environmental damage
