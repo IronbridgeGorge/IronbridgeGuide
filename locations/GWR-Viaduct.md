@@ -5,7 +5,7 @@ longitude: -2.493356
 id: 7
 ---
 
-This huge structure is a railway viaduct. It was built between 1862 and 1864 as part of the line between Wellington and Craven Arms. When it was built it was known as the "golden mile", as it was so expensive. 
+This huge structure is a railway viaduct. It was built between 1862 and 1864 as part of the line between Wellington and Craven Arms. When it was built it was known as the "golden mile", as it the most expensive viaduct ever built in its time. 
 
 The railway was built after the blast furnance was already here, and so they had to very carefully construct the viaduct around the existing buildings – not the othe way round. If you look at the base of the viaduct, you can see how carefully the brickwork jigsaws with the other other buildings.
 
