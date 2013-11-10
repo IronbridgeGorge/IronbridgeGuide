@@ -7,7 +7,10 @@ id: 11
 
 Enginuity is housed in the old Engine Shop - steam engines were built here in the 19th Century. It now home to fantastic exhibits and state of the art [FabLab](http://www.fablabmanchester.org/)
 
+## Do you know...
+what was the Internet like in the mid 19th century?
 
+Listen to a historian Matthew Ward talks about the telegraph.
 <audio controls>
     <source src="/audio/Telegraph.mp3" title="Telegraph">
 </audio>
