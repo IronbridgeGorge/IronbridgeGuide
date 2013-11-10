@@ -21,11 +21,20 @@ Here’s curator Shane talking about the fountain:
 
 Want to know more? Check the [British Monarchy official website](http://www.royal.gov.uk/royaleventsandceremonies/swanupping/swanupping.aspx)
 
-Listen:
+## Did you know?
+... when and where the Great Exhibition did take place?
+
+Listen to a story told by a historian Matthew Ward. 
 
 <audio controls>
     <source src="/audio/Great-Exhibition.mp3">
 </audio>
+
+## Did you know?
+... why the Great Exhibition did change the world?
+Listen to a historian Matthew Ward tells us a story about this exhibition. 
+
+Want to know more? Just tweet and ask @HistoryNeedsYou https://twitter.com/HistoryNeedsYou
 
 <audio controls>
     <source src="/audio/Great-Exhibition2.mp3">
