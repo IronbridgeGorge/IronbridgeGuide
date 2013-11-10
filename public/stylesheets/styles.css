@@ -139,7 +139,6 @@ a {
 	margin: 0;
 	padding: 50px 0 0 0;
 	background-color: #FCFCFC;
-	min-height: 100%;
 }
 
 
@@ -198,4 +197,24 @@ a {
 .about-link {
 	text-align: center;
 	margin-top: 30px;
+}
+
+h2.questions {
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+}
+
+.ask-question {
+	text-align: center;
+}
+
+.ask-question a {
+	font-size: 1.5em;
+	text-decoration: underline;
+}
+
+audio {
+	display: block;
+	margin: 0 auto;
 }
