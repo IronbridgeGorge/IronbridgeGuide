@@ -1,7 +1,7 @@
 ---
 name: Coalbrookdale
-latitude: 52.639289
-longitude: -2.492955
+latitude: 52.636455
+longitude: -2.493103
 id: 9
 ---
 

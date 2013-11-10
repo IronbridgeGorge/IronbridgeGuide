@@ -1,7 +1,7 @@
 ---
 name: The Pillar of Friendship Statue
-latitude: 52.63982
-longitude: -2.49268
+latitude: 52.639932
+longitude: -2.492669
 id: 5
 ---
 

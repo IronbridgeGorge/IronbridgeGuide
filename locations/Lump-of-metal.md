@@ -1,7 +1,7 @@
 ---
 name: Lump of Metal
-latitude: 52.63982
-longitude: -2.49268
+latitude: 52.639886
+longitude: -2.49292
 id: 10
 ---
 
