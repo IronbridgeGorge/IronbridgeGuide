@@ -34,7 +34,7 @@
     distance_from_coalbrookdale = getDistance(current_location.latitude, current_location.longitude, 52.638239,-2.492922);
 
     if (distance_from_coalbrookdale < 5000) {
-      text = 'Welcome to Coalbrookdale';
+      text = 'Welcome to Coalbrookdale. Explore the locations by wandering around.';
     } else {
       text = 'You are over 5km from Coalbrookdale. Why not visit?'
     }
@@ -44,16 +44,14 @@
   }
 
   function displayError(error) {
-  	console.log('Error locating');
-  	console.log(error);
-
+    $('#your-location').text("Sorry, we couldn't locate you. Maybe you didn't give us permission? Never mind, you can still explore the locations using the list below.")
   }
 
   function checkForGeoLocation() {
 
     if (navigator.geolocation) {
 
-		$('#your-location').text('Finding you...');
+		$('#your-location').text('Finding you... (Please note: the app works better if you have GPS and WiFi enabled)');
     navigator.geolocation.watchPosition(
       displayPosition, 
       displayError,
@@ -62,6 +60,7 @@
   
     } else {
 
+      $('#your-location').text("Your device doesn't seem to support geolocation. However you can still explore the lcoations in the list below.")
     }
 
   }
