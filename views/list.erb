@@ -65,6 +65,17 @@
 
   }
 
+
+  function friendlyDistance(distance) {
+    if (distance < 1000) {
+      return distance + 'm'
+    } else if (distance < 5000) {
+      return (Math.round(distance / 100) / 10) + 'km'
+    } else {
+      return Math.round(distance / 1000) + 'km'
+    }
+  }
+
   function update_location_distances() {
 
   	var location_at = null;;
@@ -92,7 +103,7 @@
             }           
           }
 
-        $('#location-distance-' + locations[i].id).text(distance_to_location + 'm away');
+        $('#location-distance-' + locations[i].id).text(friendlyDistance(distance_to_location) + ' away');
 
       }
 
