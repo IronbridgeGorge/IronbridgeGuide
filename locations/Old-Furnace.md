@@ -25,4 +25,4 @@ Listen to Bill Brown (born in 1886) speaking about his job as a worker at a forg
 
 **Who designed the pyramid structure?**
 
-The pyramid structure was built in the 60s as a way of conserving the blast furnace. We’re not sure who the architect was.
+The pyramid structure was built in the early 1990s as a way of conserving the blast furnace. The architect was Les Sparks. The pyramid shape might have been designed to reflect some of the shapes within the existing brickwork – but not everyone is a fan.
