@@ -2,7 +2,7 @@
 name: Coalbrookdale Scientific Institute
 latitude: 52.635654
 longitude: -2.489231
-id: 13
+id: 15
 ---
 
 In the area known as Paradise sits this fantastic building. (@vshropshire)[https://twitter.com/vshropshire] notes it was established 1853 by the Coalbrookdale Company as a literary and scientific institute, later a school of art.
